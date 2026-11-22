@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BuildSafe — Evaluación participativa de vulnerabilidad sísmica</title>
+<meta name="description" content="BuildSafe guía a las familias de viviendas autoconstruidas de Lima y Callao en una evaluación preliminar de la vulnerabilidad sísmica de su casa.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a class="nav-marca" href="#contenido">
+      <img src="assets/logo-azul.jpeg" alt="BuildSafe Logo" class="nav-logo">
+    </a>
+    <nav class="nav-menu" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="btnLogin" class="btn btn-secundario">Iniciar Sesión</button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero">
+    <div class="contenedor hero-inner">
+      <p class="hero-kicker">Lima y Callao</p>
+      <h1>Sepa en qué estado está su vivienda antes de que lo diga un sismo</h1>
+      <p class="hero-texto">
+        El 75&nbsp;% de las viviendas del país se construyó sin el cálculo de un ingeniero.
+        BuildSafe traduce la revisión técnica a un recorrido guiado que cualquier familia
+        puede completar desde su celular, incluso sin conexión a internet.
+      </p>
+      <p class="hero-acciones">
+        <button type="button" id="btnEvaluacion" class="btn btn-primario">Iniciar evaluación</button>
+        <a class="btn btn-enlace" href="#metodologia">Ver cómo funciona</a>
+      </p>
+      <p class="aviso" role="note">
+        <span class="aviso-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.2" fill="currentColor"/></svg>
+        </span>
+        <span><strong>Evaluación preliminar y orientativa.</strong> No reemplaza la revisión
+        de un ingeniero ni constituye un documento con validez legal o municipal.</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="caracteristicas" class="seccion" aria-labelledby="t-caracteristicas">
+    <div class="contenedor">
+      <h2 id="t-caracteristicas">Características</h2>
+      <p class="seccion-intro">
+        Cada función responde a una condición real de uso: luz irregular, una sola mano libre,
+        señal que va y viene y personas sin vocabulario técnico.
+      </p>
+
+      <ul class="tarjetas" role="list">
+        <li class="tarjeta">
+          <span class="tarjeta-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Evaluación guiada paso a paso</h3>
+          <p>Una sola pregunta o tarea por pantalla, organizada por ambientes de la vivienda y escrita sin terminología de ingeniería.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="13.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7l1.5-2h5L16 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Captura fotográfica asistida</h3>
+          <p>Guías de encuadre e imágenes de referencia para comparar. La aplicación avisa si la foto no sirve antes de dejar avanzar.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M12 3v10m0 0l-3.5-3.5M12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Funciona sin conexión</h3>
+          <p>La evaluación completa se guarda en el teléfono y se sincroniza sola cuando el equipo recupera la señal.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Resultado comprensible</h3>
+          <p>El nivel de riesgo se expresa con color, ícono y texto, acompañado de los hallazgos que lo sustentan.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Recomendaciones priorizadas</h3>
+          <p>Acciones de prevención ordenadas por prioridad, con una idea aproximada del esfuerzo que demanda cada una.</p>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M12 21s7-5.2 7-11a7 7 0 10-14 0c0 5.8 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Panel comunitario</h3>
+          <p>Los resultados del barrio se reúnen por manzana y se exportan como reporte para sustentar gestiones ante la municipalidad.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="metodologia" class="seccion seccion-alt" aria-labelledby="t-metodologia">
+    <div class="contenedor">
+      <h2 id="t-metodologia">Metodología</h2>
+      <p class="seccion-intro">
+        El recorrido traduce la normativa técnica peruana —las normas E.030 y E.070 y las guías
+        de reforzamiento del SENCICO— a preguntas que la familia puede responder observando su casa.
+      </p>
+
+      <ol class="pasos" role="list">
+        <li class="paso"><span class="paso-num" aria-hidden="true">1</span><h3>Registro de la vivienda</h3><p>Ubicación, número de pisos, antigüedad aproximada y material predominante.</p></li>
+        <li class="paso"><span class="paso-num" aria-hidden="true">2</span><h3>Recorrido por ambientes</h3><p>La evaluación avanza ambiente por ambiente y señala cuáles quedan pendientes.</p></li>
+        <li class="paso"><span class="paso-num" aria-hidden="true">3</span><h3>Evidencia fotográfica</h3><p>Fotos validadas en el momento y comparación con imágenes de referencia.</p></li>
+        <li class="paso"><span class="paso-num" aria-hidden="true">4</span><h3>Resultado y recomendaciones</h3><p>Nivel de vulnerabilidad, hallazgos que lo explican y acciones priorizadas.</p></li>
+      </ol>
+
+      <h3 class="subtitulo">Niveles de vulnerabilidad</h3>
+      <p class="seccion-intro">
+        Cada nivel se identifica con color, ícono y etiqueta de texto, de modo que se entienda
+        sin depender de la distinción de colores.
+      </p>
+
+      <ul class="niveles" role="list">
+        <li class="nivel nivel-alto">
+          <span class="nivel-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path d="M12 3L22 20H2L12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.1" fill="currentColor"/></svg>
+          </span>
+          <div>
+            <h4>Riesgo alto</h4>
+            <p class="nivel-estado">Atención prioritaria</p>
+            <p>Se detectaron condiciones que requieren la revisión de un ingeniero antes de cualquier ampliación.</p>
+          </div>
+        </li>
+        <li class="nivel nivel-medio">
+          <span class="nivel-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.3" r="1.1" fill="currentColor"/></svg>
+          </span>
+          <div>
+            <h4>Riesgo medio</h4>
+            <p class="nivel-estado">Seguimiento requerido</p>
+            <p>Hay señales que conviene vigilar y corregir de forma planificada, sin urgencia inmediata.</p>
+          </div>
+        </li>
+        <li class="nivel nivel-bajo">
+          <span class="nivel-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.3l2.8 2.8L16.2 9.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h4>Riesgo bajo</h4>
+            <p class="nivel-estado">Condición estable</p>
+            <p>No se identificaron señales críticas. Conviene repetir la evaluación después de cada modificación.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" class="seccion seccion-contacto" aria-labelledby="t-contacto">
+    <div class="contenedor contacto-inner">
+      <h2 id="t-contacto">Solicite acceso para su comunidad</h2>
+      <p class="seccion-intro">
+        BuildSafe trabaja con juntas vecinales, oficinas municipales de gestión del riesgo y
+        brigadas universitarias. Si representa a una organización, puede solicitar acceso al panel comunitario.
+      </p>
+      <p>
+        <button type="button" id="btnAcceso" class="btn btn-primario">Solicitar acceso</button>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie" role="contentinfo">
+  <div class="contenedor pie-inner">
+    <p class="pie-marca">BuildSafe</p>
+    <p id="estadoConexion" class="estado estado-online">
+      <span class="estado-punto" aria-hidden="true"></span>
+      <span id="estadoTexto">Conexión Estable · Sincronizado</span>
+    </p>
+    <p class="pie-legal">
+      Proyecto académico · HCI for UX Design (1ASI0784) · Universidad Peruana de Ciencias Aplicadas · 2026-20<br>
+      La evaluación que ofrece BuildSafe es preliminar y orientativa, y no reemplaza la revisión de un ingeniero.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* =========================================================================
+   BuildSafe — Landing Page
+   Hoja de estilos única. Aplica la guía de estilos del Capítulo IV.
+   Los colores del semáforo (rojo, ámbar, verde) se usan exclusivamente
+   para comunicar el nivel de vulnerabilidad, nunca como adorno.
+   ========================================================================= */
+
+:root{
+  /* Marca */
+  --azul-oscuro:#0B3C5D;   /* Títulos principales          11.55:1 sobre blanco */
+  --azul:#15699F;          /* Botón primario, texto blanco  5.91:1 */
+  --azul-foco:#1A7FBF;     /* Anillo de foco (elemento no textual) */
+  --naranja:#F2994A;       /* Secundario, siempre con texto oscuro  6.80:1 */
+  --naranja-texto:#3A2000;
+
+  /* Neutros */
+  --texto:#333333;         /* 12.63:1 sobre blanco */
+  --texto-suave:#555F6B;
+  --fondo:#FFFFFF;
+  --fondo-alt:#F5F7FA;
+  --borde:#D9E0E8;
+
+  /* Semáforo de vulnerabilidad — uso exclusivo */
+  --alto:#A5281B;      --alto-fondo:#FDECEA;
+  --medio:#8A5A00;     --medio-fondo:#FEF6E7;
+  --bajo:#1E7B45;      --bajo-fondo:#EAF7F0;
+
+  --radio:10px;
+  --ancho:1120px;
+  --toque:44px;        /* Área táctil mínima */
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',Roboto,Arial,Helvetica,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  color:var(--texto);
+  background:var(--fondo);
+}
+
+h1,h2,h3,h4{color:var(--azul-oscuro);line-height:1.25;margin:0 0 .5em;}
+h1{font-size:2.3rem;}
+h2{font-size:1.75rem;}
+h3{font-size:1.1rem;}
+h4{font-size:1.05rem;}
+p{margin:0 0 1em;}
+
+.contenedor{width:100%;max-width:var(--ancho);margin:0 auto;padding:0 24px;}
+
+/* ---------- Accesibilidad: salto de contenido y foco visible ---------- */
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--azul-oscuro);color:#fff;padding:12px 18px;border-radius:0 0 var(--radio) 0;
+}
+.skip-link:focus{left:0;}
+
+a:focus-visible,
+button:focus-visible{
+  outline:3px solid var(--azul-foco);
+  outline-offset:4px;
+  border-radius:4px;
+}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:var(--toque);min-width:var(--toque);
+  padding:12px 24px;
+  font:inherit;font-weight:600;
+  border:2px solid transparent;border-radius:var(--radio);
+  cursor:pointer;text-decoration:none;
+  transition:background-color .18s ease,color .18s ease,transform .18s ease;
+}
+.btn-primario{background:var(--azul);color:#fff;}
+.btn-primario:hover{background:#0E557F;}
+.btn-secundario{background:#fff;color:var(--azul-oscuro);border-color:var(--azul-oscuro);}
+.btn-secundario:hover{background:var(--azul-oscuro);color:#fff;}
+.btn-enlace{background:transparent;color:var(--azul-oscuro);text-decoration:underline;padding:12px 8px;}
+
+/* ---------- Encabezado ---------- */
+.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--borde);}
+.nav-inner{
+  width:100%;max-width:var(--ancho);margin:0 auto;padding:10px 24px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.nav-logo{display:block;height:44px;width:auto;}
+.nav-menu{margin-left:auto;}
+.nav-menu ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+.nav-menu a{
+  display:inline-flex;align-items:center;min-height:var(--toque);
+  padding:8px 14px;color:var(--azul-oscuro);text-decoration:none;font-weight:600;border-radius:var(--radio);
+}
+.nav-menu a:hover{background:var(--fondo-alt);text-decoration:underline;}
+
+/* ---------- Hero ---------- */
+.hero{background:linear-gradient(180deg,#F7FAFD 0%,#FFFFFF 100%);border-bottom:1px solid var(--borde);}
+.hero-inner{padding:64px 24px 56px;max-width:860px;}
+.hero-kicker{
+  display:inline-block;margin:0 0 12px;padding:5px 12px;
+  background:var(--azul-oscuro);color:#fff;border-radius:999px;
+  font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+}
+.hero-texto{font-size:1.1rem;color:var(--texto-suave);max-width:62ch;}
+.hero-acciones{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:28px 0 24px;}
+
+.aviso{
+  display:flex;gap:12px;align-items:flex-start;
+  background:var(--medio-fondo);color:var(--medio);
+  border-left:5px solid var(--medio);
+  border-radius:0 var(--radio) var(--radio) 0;
+  padding:14px 18px;margin:0;font-size:.95rem;max-width:66ch;
+}
+.aviso-icono{flex:0 0 auto;line-height:0;margin-top:2px;}
+
+/* ---------- Secciones ---------- */
+.seccion{padding:64px 0;}
+.seccion-alt{background:var(--fondo-alt);}
+.seccion-intro{color:var(--texto-suave);max-width:70ch;}
+.subtitulo{margin-top:44px;}
+
+/* ---------- Tarjetas de características ---------- */
+.tarjetas{
+  list-style:none;margin:32px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.tarjeta{
+  background:#fff;border:1px solid var(--borde);border-radius:var(--radio);
+  padding:26px 22px;
+}
+.js .tarjeta,.js .paso{
+  opacity:0;transform:translateY(22px);
+  transition:opacity .5s ease,transform .5s ease;
+}
+.js .tarjeta.visible,.js .tarjeta-icono{display:inline-flex;color:var(--azul);margin-bottom:12px;line-height:0;}
+.tarjeta p{margin:0;color:var(--texto-suave);font-size:.97rem;}
+
+/* ---------- Pasos de la metodología ---------- */
+.pasos{
+  list-style:none;margin:32px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:paso;
+}
+.paso{
+  background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:24px 20px;
+}
+.paso-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;margin-bottom:12px;
+  background:var(--naranja);color:var(--naranja-texto);
+  border-radius:50%;font-weight:700;
+}
+.paso p{margin:0;color:var(--texto-suave);font-size:.95rem;}
+
+/* ---------- Niveles de vulnerabilidad ---------- */
+.niveles{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.nivel{
+  display:flex;gap:14px;align-items:flex-start;
+  border-radius:var(--radio);border:1px solid transparent;border-left-width:6px;
+  padding:22px 20px;background:#fff;
+}
+.nivel-icono{flex:0 0 auto;line-height:0;margin-top:2px;}
+.nivel h4{margin:0 0 2px;}
+.nivel p{margin:0;font-size:.95rem;color:var(--texto-suave);}
+.nivel-estado{font-weight:700;margin:0 0 8px !important;}
+
+.nivel-alto{background:var(--alto-fondo);border-color:var(--alto);}
+.nivel-alto .nivel-icono,.nivel-alto h4,.nivel-alto .nivel-estado{color:var(--alto);}
+.nivel-medio{background:var(--medio-fondo);border-color:var(--medio);}
+.nivel-medio .nivel-icono,.nivel-medio h4,.nivel-medio .nivel-estado{color:var(--medio);}
+.nivel-bajo{background:var(--bajo-fondo);border-color:var(--bajo);}
+.nivel-bajo .nivel-icono,.nivel-bajo h4,.nivel-bajo .nivel-estado{color:var(--bajo);}
+
+/* ---------- Contacto ---------- */
+.seccion-contacto{background:var(--azul-oscuro);}
+.contacto-inner{max-width:760px;text-align:center;}
+.seccion-contacto h2{color:#fff;}
+.seccion-contacto .seccion-intro{color:#E8EEF4;margin-left:auto;margin-right:auto;}
+.seccion-contacto .btn-primario{background:var(--naranja);color:var(--naranja-texto);}
+.seccion-contacto .btn-primario:hover{background:#E08534;}
+.seccion-contacto .btn-primario:focus-visible{outline-color:#fff;}
+
+/* ---------- Pie ---------- */
+.pie{background:#082E47;color:#E8EEF4;padding:36px 0;}
+.pie-inner{display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.pie-marca{font-weight:700;font-size:1.2rem;margin:0;color:#fff;}
+.pie-legal{margin:0;font-size:.88rem;color:#C9D6E2;line-height:1.6;}
+
+.estado{
+  display:inline-flex;align-items:center;gap:9px;margin:0;
+  padding:8px 14px;border-radius:999px;font-weight:600;font-size:.92rem;
+}
+.estado-punto{width:10px;height:10px;border-radius:50%;background:currentColor;flex:0 0 auto;}
+.estado-online{background:var(--bajo-fondo);color:var(--bajo);}
+.estado-offline{background:var(--medio-fondo);color:var(--medio);}
+
+/* =========================================================================
+   Adaptación responsive — el mismo código en Desktop, Tablet y Mobile
+   ========================================================================= */
+
+/* Tablet */
+@media (max-width:900px){
+  h1{font-size:1.95rem;}
+  .hero-inner{padding:48px 24px 44px;}
+  .seccion{padding:52px 0;}
+  .tarjetas{grid-template-columns:repeat(2,1fr);}
+  .pasos{grid-template-columns:repeat(2,1fr);}
+  .niveles{grid-template-columns:1fr;}
+}
+
+/* Móvil */
+@media (max-width:620px){
+  body{font-size:16px;}
+  h1{font-size:1.65rem;}
+  h2{font-size:1.4rem;}
+  .nav-inner{padding:10px 16px;gap:10px;}
+  .nav-logo{height:36px;}
+  .nav-menu{margin-left:0;width:100%;order:3;}
+  .nav-menu ul{justify-content:space-between;width:100%;}
+  .nav-menu a{padding:8px 6px;font-size:.95rem;}
+  #btnLogin{margin-left:auto;}
+  .contenedor{padding:0 16px;}
+  .hero-inner{padding:36px 16px 34px;}
+  .hero-acciones .btn{width:100%;}
+  .seccion{padding:42px 0;}
+  .tarjetas,.pasos{grid-template-columns:1fr;}
+  .nivel{flex-direction:column;}
+}
+
+/* Respeta la preferencia de movimiento reducido del sistema */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation:none !important;transition:none !important;}
+  .js .tarjeta,.js .paso{opacity:1 !important;transform:none !important;}
+}
